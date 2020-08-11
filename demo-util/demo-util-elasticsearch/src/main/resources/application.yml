@@ -1,0 +1,29 @@
+spring:
+  data:
+    elasticsearch:
+    ####集群名称
+     cluster-name: myes
+    ####地址 
+     cluster-nodes: 172.16.97.117:9300
+eureka:
+  client:
+    service-url:
+   ##### 当前会员服务注册到eureka服务地址
+      defaultZone: http://localhost:8000/eureka,http://localhost:8001/eureka
+freemarker:
+    # 设置模板后缀名
+    suffix: .ftl
+    # 设置文档类型
+    content-type: text/html
+    # 设置页面编码格式
+    charset: UTF-8
+    # 设置页面缓存
+    cache: false
+    # 设置ftl文件路径
+    template-loader-path:
+      - classpath:/templates
+  # 设置静态文件路径，js,css等
+mvc: 
+    static-path-pattern: /static/**
+
+     

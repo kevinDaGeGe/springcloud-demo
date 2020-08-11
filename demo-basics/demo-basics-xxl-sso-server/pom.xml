@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo-basics</artifactId>
+        <groupId>com.kevin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>demo-basics-xxl-sso-server</artifactId>
+    <dependencies>
+        <!-- freemarker -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <!-- sso core -->
+        <dependency>
+            <groupId>com.xuxueli</groupId>
+            <artifactId>xxl-sso-core</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <!-- 认证授权认证引入会员服务接口 -->
+        <dependency>
+            <groupId>com.kevin</groupId>
+            <artifactId>demo-service-api-mycat</artifactId>
+            <version>${framework.version}</version>
+        </dependency>
+        <!-- springcloud feign组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kevin</groupId>
+            <artifactId>demo-common-web-core</artifactId>
+            <version>${framework.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
