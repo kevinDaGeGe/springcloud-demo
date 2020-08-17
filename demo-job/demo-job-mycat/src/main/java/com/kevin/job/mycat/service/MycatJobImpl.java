@@ -21,7 +21,7 @@ public class MycatJobImpl extends IncreaseJobTimeStrategy {
 
     @Override
     protected void doJob(String msg) {
-        System.out.println("mycat队列实际执行任务依次");
+        System.out.println("mycat队列实际执行任务一次");
     }
 
     @Override

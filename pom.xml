@@ -27,12 +27,15 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.14</java.version>
+        <java.version>1.8</java.version>
+<!--         <spring-cloud.version>Finchley.RC1</spring-cloud.version> -->
+        <spring-cloud.version>Finchley.M7</spring-cloud.version>
         <framework.version>1.0-SNAPSHOT</framework.version>
+        <project.version>1.0-SNAPSHOT</project.version>
         <maven.version>3.3.10</maven.version>
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.14</jdk.version>
+        <jdk.version>8</jdk.version>
 <!--         <jetty.version>7.6.3.v20120416</jetty.version> -->
         <jetty.version>9.4.9.v20180320</jetty.version>
 
@@ -43,8 +46,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.M7</version>
-<!--                <version>Finchley.RELEASE</version>-->
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -62,14 +64,14 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!-- 整合zipkin -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- swagger-spring-boot -->
         <dependency>
             <groupId>com.spring4all</groupId>
@@ -168,7 +170,6 @@
 
     <!-- 插件配置 -->
     <build>
-        <finalName>demo-parent</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>

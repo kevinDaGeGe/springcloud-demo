@@ -52,6 +52,7 @@ public class BaseApiService<T> {
 	// 接口直接返回true 或者false
 	public Boolean isSuccess(BaseResponse<?> baseResp) {
 		if (baseResp == null) {
+			
 			return false;
 		}
 		if (baseResp.getCode().equals(Constants.HTTP_RES_CODE_500)) {

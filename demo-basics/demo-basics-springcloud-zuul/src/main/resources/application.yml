@@ -20,6 +20,9 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://172.16.97.123:3306/kevin_gateway?useUnicode=true&characterEncoding=UTF-8
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+
 ###服务注册到eureka地址
 eureka:
   client:
@@ -38,7 +41,8 @@ zuul:
         ### 以 /api-shardingjdbc/访问转发
       path: /api-shardingjdbc/**
       serviceId: app-kevin-shardingjdbc
-
+swagger:
+  base-package: com.kevin.basics.zuul.controller
 kevin: 
   zuul: 
     swagger: 

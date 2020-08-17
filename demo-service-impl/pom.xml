@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-service-mycat</module>
+        <module>demo-service-shardingjdbc</module>
     </modules>
     <dependencies>
         <!-- SpringBoot整合fegnin客户端 -->
@@ -34,6 +35,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>

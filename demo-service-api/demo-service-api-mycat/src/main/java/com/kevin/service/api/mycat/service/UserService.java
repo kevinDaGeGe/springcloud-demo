@@ -20,5 +20,5 @@ public interface UserService {
     public UserEntity findUserByName(String userName);
 
     @RequestMapping("/insertUser")
-    public List<UserEntity> insertUser(String userName);
+    public List<UserEntity> insertUser(int id,String userName);
 }

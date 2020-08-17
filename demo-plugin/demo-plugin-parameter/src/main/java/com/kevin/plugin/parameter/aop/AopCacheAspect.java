@@ -4,6 +4,7 @@ package com.kevin.plugin.parameter.aop;
  */
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.util.concurrent.RateLimiter;
 import com.kevin.cache.CacheService;
 import com.kevin.cache.ehcache.EhCacheUtils;
 import com.kevin.plugin.parameter.enums.UseCache;
@@ -14,12 +15,14 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Description:拦截数据查询请求,按照缓存配置从redis或ehcace里面查询
@@ -36,6 +39,9 @@ public class AopCacheAspect {
 //    private RedisService redisService;
     @Autowired
     CacheService cacheService;
+
+    RateLimiter rateLimiter = RateLimiter.create(5,1, TimeUnit.SECONDS);
+
 
     /**
      * 设置切入点
@@ -92,7 +98,7 @@ public class AopCacheAspect {
         // 2.查询二级缓存
         String userJSON = cacheService.get(key);
         // 如果redis缓存中有这个对应的 值，修改一级缓存
-        if (!StringUtils.isEmpty(userJSON)) {
+        if (StringUtils.isNotEmpty(userJSON)) {
             JSONObject jsonObject = new JSONObject();
             Object resultUser = jsonObject.parseObject(userJSON, methodReturnType.getClass());
             // 存放在一级缓存
@@ -115,7 +121,21 @@ public class AopCacheAspect {
         ehCacheUtils.put(cacheName, key, resultUser);
         // 一级缓存的有效期时间减去二级缓存执行代码时间
 
+
+        notifyMQ("");
         return resultUser;
+    }
+
+
+    /**
+     * 发送缓存使用信息到mq
+     * @param msg 信息格式:className+methodName+id+useCacheOrDB+isDBData
+     */
+    @Async
+    protected void notifyMQ(String msg){
+        if(rateLimiter.tryAcquire()){
+            //TODO...
+        }
     }
 
 

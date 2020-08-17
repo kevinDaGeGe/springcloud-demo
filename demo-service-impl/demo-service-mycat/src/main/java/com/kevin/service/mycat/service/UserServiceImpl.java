@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService {
 		return userMapper.findUser();
 	}
 
-	public List<UserEntity> insertUser(String userName) {
-		return userMapper.insertUser(userName);
+	public List<UserEntity> insertUser(int id,String userName) {
+		return userMapper.insertUser(id,userName);
 	}
 
 }

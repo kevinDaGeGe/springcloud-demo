@@ -14,6 +14,9 @@
     <modules>
         <module>demo-service-api-mycat</module>
         <module>demo-service-api-shardingjdbc</module>
+        <module>demo-service-api-shardingjdbc</module>
+        <module>demo-service-api-shardingjdbc</module>
+        <module>demo-service-api-sharding</module>
     </modules>
     <dependencies>
         <dependency>

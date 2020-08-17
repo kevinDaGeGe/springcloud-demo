@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: 67017
+Build-Jdk: 14.0.2
+Implementation-Title: demo-util-stream-rabbitMQ-consumer
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.kevin
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/springcloud-demo/demo-util/demo-util-stream-rabbitMQ-co
+ nsumer
+Created-By: Maven Integration for Eclipse
+
