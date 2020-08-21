@@ -16,6 +16,9 @@
         <module>demo-plugin-exception</module>
         <module>demo-plugin-parameter</module>
         <module>demo-plugin-Verification</module>
+        <module>demo-plugin-xss</module>
+        <module>demo-plugin-csrf</module>
+        <module>demo-plugin-fileupload</module>
     </modules>
 
 

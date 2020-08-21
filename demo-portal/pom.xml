@@ -12,7 +12,7 @@
     <artifactId>demo-portal</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-plugin-parameter</module>
+        <module>demo-portal-mycat</module>
     </modules>
 
 

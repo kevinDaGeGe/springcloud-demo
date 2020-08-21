@@ -17,6 +17,7 @@
         <module>demo-basics-xxl-sso-server</module>
         <module>demo-basics-springcloud-consul</module>
         <module>demo-basics-security</module>
+        <module>demo-basics-springcloud-gateway</module>
     </modules>
 
 

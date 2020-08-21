@@ -18,6 +18,7 @@
         <module>demo-plugin</module>
         <module>demo-util</module>
         <module>demo-cache</module>
+        <module>demo-jpa</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,9 +37,17 @@
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>8</jdk.version>
-<!--         <jetty.version>7.6.3.v20120416</jetty.version> -->
+<!--         <jem tty.version>7.6.3.v20120416</jetty.version> -->
         <jetty.version>9.4.9.v20180320</jetty.version>
-
+        <source.level>1.8</source.level>
+        <target.level>1.8</target.level>
+        <junit.version>4.12</junit.version>
+        <docker-maven-plugin.version>0.30.0</docker-maven-plugin.version>
+        <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version>
+        <image.name>${project.artifactId}:${framework.version}</image.name>
+        <java-image.name>openjdk:8</java-image.name>
     </properties>
     <!-- 管理依赖 -->
     <dependencyManagement>

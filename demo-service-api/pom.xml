@@ -17,6 +17,9 @@
         <module>demo-service-api-shardingjdbc</module>
         <module>demo-service-api-shardingjdbc</module>
         <module>demo-service-api-sharding</module>
+        <module>demo-service-api-dubbo-consumer</module>
+        <module>demo-service-api-dubbo-produer</module>
+        <module>demo-service-api-dubbo-provider</module>
     </modules>
     <dependencies>
         <dependency>

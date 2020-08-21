@@ -14,6 +14,9 @@
     <modules>
         <module>demo-service-mycat</module>
         <module>demo-service-shardingjdbc</module>
+        <module>demo-service-dubbo-consumer</module>
+        <module>demo-service-dubbo-provider</module>
+        <module>demo-service-session-redis</module>
     </modules>
     <dependencies>
         <!-- SpringBoot整合fegnin客户端 -->
