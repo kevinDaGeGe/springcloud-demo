@@ -15,10 +15,7 @@
         <module>demo-util-core</module>
         <module>demo-util-stream-kafka-producer</module>
         <module>demo-util-stream-kafka-consumer</module>
-        <module>demo-util-stream-RabbitMQ-consumer</module>
         <module>demo-util-stream-rabbitMQ-producer</module>
-        <module>demo-util-stream-rabbitMQ-consumer</module>
-        <module>demo-util-stream-rabbitMQ-consumer</module>
         <module>demo-util-stream-rabbitMQ-consumer</module>
         <module>demo-util-desensitized</module>
         <module>demo-util-elasticsearch</module>

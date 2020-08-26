@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-springcloud-consul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-springcloud-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-springcloud-eureka/src/main/java/com.kevin/EurekaApplication.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-springcloud-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-springcloud-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-basics/demo-basics-xxl-sso-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-cache/demo-cache-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-cache/demo-cache-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-cache/demo-cache-ehcache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-cache/demo-cache-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-common/demo-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-common/demo-common-parameter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-common/demo-common-thread/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-common/demo-common-txmanage-lcn/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-common/demo-common-web-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-job/demo-job-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-job/demo-job-mycat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-job/demo-job-quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-orm/demo-orm-mycat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-orm/demo-orm-mycat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-Verification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-csrf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-fileupload/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-parameter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-xss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-plugin/demo-plugin-xss/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-portal/demo-portal-mycat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-dubbo-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-dubbo-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-dubbo-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-dubbo-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-mycat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-mycat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-api/demo-service-api-sharding/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-impl/demo-service-dubbo-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-impl/demo-service-dubbo-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-impl/demo-service-mycat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-impl/demo-service-session-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-service-impl/demo-service-shardingjdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-desensitized/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-kafka-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-kafka-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-rabbitMQ-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-rabbitMQ-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-rabbitMQ-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-util/demo-util-stream-rabbitMQ-producer/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

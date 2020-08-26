@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service-impl/demo-service-dubbo-provider/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/demo-basics-springcloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-basics/demo-basics-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-common/demo-common-log/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-configure/demo-configure-parameter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-configure/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-jpa/demo-jpa-mycat/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-plugin-log/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-plugin-xss/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-portal/demo-plugin-parameter/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service-api/demo-service-api-dubbo-produer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service-api/demo-service-api-member/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service-api/demo-service-api-shardingjdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service-impl/demo-service-dubbo-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-util-stream-RabbitMQ-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-util/demo-util-stream-RabbitMQ-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-util/demo-util-stream-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-util/demo-util-stream-rabbitMQ-consumer/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

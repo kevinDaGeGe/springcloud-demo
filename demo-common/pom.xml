@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-common-core</module>
-        <module>demo-common-parameter</module>
         <module>demo-common-web-core</module>
         <module>demo-common-txmanage-lcn</module>
         <module>demo-common-thread</module>

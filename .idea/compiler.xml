@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo-common-log" />
+        <module name="demo-service-session-redis" />
+        <module name="demo-job-mycat" />
+        <module name="demo-plugin-exception" />
+        <module name="demo-basics-xxl-sso-server" />
+        <module name="demo-common-txmanage-lcn" />
+        <module name="demo-util-stream-kafka-producer" />
+        <module name="demo-common-web-core" />
+        <module name="demo-common-thread" />
+        <module name="demo-service-mycat" />
+        <module name="demo-service-api-dubbo-provider" />
+        <module name="demo-service-dubbo-provider" />
+        <module name="demo-plugin-xss" />
+        <module name="demo-service-api-sharding" />
+        <module name="demo-basics-springcloud-eureka" />
+        <module name="demo-cache-ehcache" />
+        <module name="demo-plugin-parameter" />
+        <module name="demo-util-stream-kafka-consumer" />
+        <module name="demo-util-stream-rabbitMQ-consumer" />
+        <module name="demo-util-core" />
+        <module name="demo-job-core" />
+        <module name="demo-util-elasticsearch" />
+        <module name="demo-plugin-csrf" />
+        <module name="demo-util-desensitized" />
+        <module name="demo-util-stream-kafka" />
+        <module name="demo-basics-springcloud-gateway" />
+        <module name="demo-common-core" />
+        <module name="demo-service-dubbo-consumer" />
+        <module name="demo-plugin-log" />
+        <module name="demo-basics-springcloud-zuul" />
+        <module name="demo-cache-redis" />
+        <module name="demo-cache-core" />
+        <module name="demo-orm-mycat" />
+        <module name="demo-basics-springcloud-consul" />
+        <module name="demo-portal-mycat" />
+        <module name="demo-service-shardingjdbc" />
+        <module name="demo-plugin-fileupload" />
+        <module name="demo-service-api-mycat" />
+        <module name="demo-plugin-Verification" />
+        <module name="demo-job-quartz" />
+        <module name="demo-configure-parameter" />
+        <module name="demo-util-stream-rabbitMQ-producer" />
+        <module name="demo-basics-security" />
+        <module name="demo-service-api-dubbo-consumer" />
+        <module name="demo-common-parameter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="demo-jpa" target="1.8" />
+      <module name="demo-jpa-mycat" target="1.8" />
+      <module name="demo-service-api-dubbo-producer" target="1.8" />
+      <module name="demo-service-api-dubbo-produer" target="1.5" />
+      <module name="demo-service-api-shardingjdbc" target="1.8" />
+      <module name="demo-service-dubbo-producer" target="1.8" />
+      <module name="demo-util-stream-rabbitMQ-consumer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo-basics-security" options="-parameters" />
+      <module name="demo-basics-springcloud-consul" options="-parameters" />
+      <module name="demo-basics-springcloud-eureka" options="-parameters" />
+      <module name="demo-basics-springcloud-gateway" options="-parameters" />
+      <module name="demo-basics-springcloud-zuul" options="-parameters" />
+      <module name="demo-basics-xxl-sso-server" options="-parameters" />
+      <module name="demo-cache-core" options="-parameters" />
+      <module name="demo-cache-ehcache" options="-parameters" />
+      <module name="demo-cache-redis" options="-parameters" />
+      <module name="demo-common" options="-parameters" />
+      <module name="demo-common-core" options="-parameters" />
+      <module name="demo-common-parameter" options="-parameters" />
+      <module name="demo-common-thread" options="-parameters" />
+      <module name="demo-common-txmanage-lcn" options="-parameters" />
+      <module name="demo-common-web-core" options="-parameters" />
+      <module name="demo-job" options="-parameters" />
+      <module name="demo-job-core" options="-parameters" />
+      <module name="demo-job-mycat" options="-parameters" />
+      <module name="demo-job-quartz" options="-parameters" />
+      <module name="demo-jpa" options="-parameters" />
+      <module name="demo-jpa-mycat" options="-parameters" />
+      <module name="demo-orm" options="-parameters" />
+      <module name="demo-orm-mycat" options="-parameters" />
+      <module name="demo-plugin" options="-parameters" />
+      <module name="demo-plugin-Verification" options="-parameters" />
+      <module name="demo-plugin-csrf" options="-parameters" />
+      <module name="demo-plugin-exception" options="-parameters" />
+      <module name="demo-plugin-fileupload" options="-parameters" />
+      <module name="demo-plugin-log" options="-parameters" />
+      <module name="demo-plugin-parameter" options="-parameters" />
+      <module name="demo-plugin-xss" options="-parameters" />
+      <module name="demo-portal" options="-parameters" />
+      <module name="demo-portal-mycat" options="-parameters" />
+      <module name="demo-service-api" options="-parameters" />
+      <module name="demo-service-api-dubbo-consumer" options="" />
+      <module name="demo-service-api-dubbo-producer" options="-parameters" />
+      <module name="demo-service-api-dubbo-produer" options="" />
+      <module name="demo-service-api-dubbo-provider" options="" />
+      <module name="demo-service-api-mycat" options="-parameters" />
+      <module name="demo-service-api-sharding" options="-parameters" />
+      <module name="demo-service-dubbo-consumer" options="-parameters" />
+      <module name="demo-service-dubbo-producer" options="-parameters" />
+      <module name="demo-service-dubbo-provider" options="-parameters" />
+      <module name="demo-service-impl" options="-parameters" />
+      <module name="demo-service-mycat" options="-parameters" />
+      <module name="demo-service-session-redis" options="-parameters" />
+      <module name="demo-service-shardingjdbc" options="-parameters" />
+      <module name="demo-util" options="-parameters" />
+      <module name="demo-util-core" options="-parameters" />
+      <module name="demo-util-desensitized" options="-parameters" />
+      <module name="demo-util-elasticsearch" options="-parameters" />
+      <module name="demo-util-stream-kafka-consumer" options="-parameters" />
+      <module name="demo-util-stream-kafka-producer" options="-parameters" />
+      <module name="demo-util-stream-rabbitMQ-consumer" options="-parameters" />
+      <module name="demo-util-stream-rabbitMQ-producer" options="-parameters" />
+    </option>
+  </component>
+</project>
