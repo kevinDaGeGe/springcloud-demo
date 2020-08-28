@@ -1,58 +1,10 @@
-spring:
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  application:
-    name: app-kevin-shardingjdbc
-sharding:
-  jdbc:
-  ####ds0
-    datasource:
-      names: ds0,ds1
-      ds0:
-        password: root
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://kevin2:3306/shardingJdbc
-        username: root
-      ds0_slave0:
-        password: root
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://kevin4:3306/shardingJdbc_read
-        username: root
-      ds1:
-        password: root
-        type: com.alibaba.druid.pool.DruidDataSource
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://kevin4:3306/shardingJdbc
-        username: root
-    config:
-      sharding:
-        tables:
-          t_order:
-            table-strategy:
-              inline:
-              #### 根据userid 进行分片
-                sharding-column: user_id
-                algorithm-expression: t_order_$->{user_id % 2}
-            database-strategy:
-              inline:
-                sharding-column: gender
-                algorithm-expression: ds$->{gender % 2}
-            actual-data-nodes: ds$->{0..1}.t_order_$->{0..1}
-        props:
-          sql: 
-          ### 开启分片日志
-            show: true
-
-
-eureka:
-  client:
-    service-url:
-   ##### 当前会员服务注册到eureka服务地址
-      defaultZone: http://kevin2:8080/eureka
-server:
-  port: 8220
+app:
+  # 与apollo的admin管理界面添加的 appId 一致
+  id: demo-service-shardingjdbc
+apollo:
+  # meta的url
+  meta: http://kevin2:8080
+  bootstrap:
+    enabled: true
+    # 从 namespace 中获取配置, 多个以逗号隔开, namespace的配置非properties格式的需要加后缀名
+    namespaces: application,eureka
