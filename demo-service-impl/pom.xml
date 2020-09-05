@@ -17,6 +17,7 @@
         <module>demo-service-dubbo-consumer</module>
         <module>demo-service-dubbo-provider</module>
         <module>demo-service-session-redis</module>
+        <module>demo-service-jenkins</module>
     </modules>
     <dependencies>
         <!-- SpringBoot整合fegnin客户端 -->
