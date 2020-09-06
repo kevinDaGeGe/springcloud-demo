@@ -1,0 +1,22 @@
+server:
+  port: 8060
+spring:
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:/config/ehcache.xml
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://kevin1:3306/test?useSSL=false&serverTimezone=GMT
+    username: kevin
+    password: N0Tweak$_@123!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  jackson:
+    serialization:
+      indent_output: true
