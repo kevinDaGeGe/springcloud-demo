@@ -15,6 +15,7 @@
         <module>demo-cache-core</module>
         <module>demo-cache-ehcache</module>
         <module>demo-cache-redis</module>
+        <module>demo-cache-redis-jedis</module>
     </modules>
 
 

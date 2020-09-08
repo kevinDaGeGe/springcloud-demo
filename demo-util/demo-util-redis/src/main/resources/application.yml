@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: app-kevin-cache-redis
+  redis:
+    database: 0
+    host: kevin2
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+    password: ''
+    port: 6379
+    max: 
+      total: 8
+      idle: 0
+      waitmillis: -1
+eureka:
+  client:
+    service-url:
+   ##### 当前会员服务注册到eureka服务地址
+      defaultZone: http://kevin2:8080/eureka
+server:
+  port: 8510

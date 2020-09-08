@@ -19,6 +19,7 @@
         <module>demo-util-stream-rabbitMQ-consumer</module>
         <module>demo-util-desensitized</module>
         <module>demo-util-elasticsearch</module>
+        <module>demo-util-redis</module>
     </modules>
 
 

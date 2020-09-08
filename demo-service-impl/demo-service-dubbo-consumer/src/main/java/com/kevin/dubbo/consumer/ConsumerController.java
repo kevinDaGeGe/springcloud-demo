@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 消费测试接口
- * @Author Sans
- * @CreateTime 2019/11/6 23:09
+ * @Description: 
+ * @author: 67017
+ * @date: 2020年8月31日 上午10:27:36
  */
 @RestController
 public class ConsumerController {

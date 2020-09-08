@@ -28,7 +28,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
+        <java.version>1.11</java.version>
 <!--         <spring-cloud.version>Finchley.RC1</spring-cloud.version> -->
         <spring-cloud.version>Finchley.M7</spring-cloud.version>
         <framework.version>1.0-SNAPSHOT</framework.version>
@@ -36,11 +36,11 @@
         <maven.version>3.3.10</maven.version>
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>8</jdk.version>
+        <jdk.version>11</jdk.version>
 <!--         <jem tty.version>7.6.3.v20120416</jetty.version> -->
         <jetty.version>9.4.9.v20180320</jetty.version>
-        <source.level>1.8</source.level>
-        <target.level>1.8</target.level>
+        <source.level>11</source.level>
+        <target.level>11</target.level>
         <junit.version>4.12</junit.version>
         <docker-maven-plugin.version>0.30.0</docker-maven-plugin.version>
         <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
@@ -185,8 +185,7 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
-                    <include>**/*.xml</include>
-                    <include>**/*.conf</include>
+                    <include>**/*</include>
                 </includes>
             </resource>
         </resources>
@@ -244,7 +243,7 @@
                         </descriptorRefs>
                         <archive>
                             <manifest>
-                                <mainClass>com.swordfall.restserver.base.WebServer</mainClass>
+<!--                                 <mainClass>com.swordfall.restserver.base.WebServer</mainClass> -->
                             </manifest>
                         </archive>
                     </configuration>
@@ -371,7 +370,7 @@
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>0.4.3</version>
                     <configuration>
-                        <imageName>hy_uav_gateway</imageName>
+                        <imageName>${project.artifactId}</imageName>
                         <dockerDirectory>src/main/docker</dockerDirectory>
                         <resources>
                             <resource>

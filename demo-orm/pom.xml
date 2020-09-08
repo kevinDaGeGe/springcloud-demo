@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-orm-mycat</module>
+        <module>demo-orm-postgresql</module>
     </modules>
 
 
