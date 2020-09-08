@@ -18,6 +18,8 @@
         <module>demo-service-dubbo-provider</module>
         <module>demo-service-session-redis</module>
         <module>demo-service-jenkins</module>
+        <module>demo-service-storm-impl</module>
+        <module>demo-service-ehcache</module>
     </modules>
     <dependencies>
         <!-- SpringBoot整合fegnin客户端 -->
