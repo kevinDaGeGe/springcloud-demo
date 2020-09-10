@@ -17,7 +17,6 @@ import java.time.LocalDate;
 @Service
 public class CacheServiceImpl implements CacheService {
     private static Logger logger = LoggerFactory.getLogger(CacheServiceImpl.class);
-
 //    @Autowired
     private JedisPool jedisPool;
 

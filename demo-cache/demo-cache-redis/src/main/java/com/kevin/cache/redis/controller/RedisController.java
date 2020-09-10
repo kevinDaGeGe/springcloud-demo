@@ -28,17 +28,23 @@ public class RedisController {
 	@Autowired
 	private RedisService redisService;
 	
-	@RequestMapping(value = "/psubscribe")
+	@GetMapping(value = "/psubscribe")
     public String psubscribe(String key) {
         log.info("psubscribe={}",key);
         redisUtil.psubscribe(keyExpiredListener, key);
         return "success";
 	}
-	@RequestMapping(value = "/setString")
+	@GetMapping(value = "/setString")
     public String setString(String key) {
 		String value = System.currentTimeMillis()+"";
 		redisService.set(key, value);
         return "success";
+	}
+	@GetMapping(value = "/getString")
+	public String getString(String key) {
+//		String value = System.currentTimeMillis()+"";
+//		redisService.get(key);
+		return redisService.get(key);
 	}
 	@GetMapping(value = "/setList", produces = "application/json;charset=UTF-8")
     public String setList(int size) {

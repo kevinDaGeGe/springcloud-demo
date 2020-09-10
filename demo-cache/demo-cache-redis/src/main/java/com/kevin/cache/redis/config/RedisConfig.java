@@ -19,10 +19,10 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import io.lettuce.core.ReadFrom;
 
 @Configuration
-//@EnableCaching
+@EnableCaching
 @ComponentScan("com.kevin.cache.redis")
 public class RedisConfig {
-	@Bean
+//	@Bean
     public LettuceConnectionFactory redisConnectionFactory(@Qualifier("redisProperties")RedisProperties redisProperties) {
 //        return new LettuceConnectionFactory(new RedisStandaloneConfiguration("192.168.80.130", 6379));
         RedisSentinelConfiguration sentinelConfig = new RedisSentinelConfiguration()

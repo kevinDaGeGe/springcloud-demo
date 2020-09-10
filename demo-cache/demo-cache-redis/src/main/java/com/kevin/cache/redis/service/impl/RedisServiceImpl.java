@@ -1,11 +1,12 @@
 package com.kevin.cache.redis.service.impl;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
-import org.redisson.client.RedisConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.StringRedisConnection;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisCallback;
@@ -14,6 +15,11 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import com.kevin.cache.redis.service.RedisService;
+
+import io.lettuce.core.RedisClient;
+import io.lettuce.core.RedisFuture;
+import io.lettuce.core.api.StatefulRedisConnection;
+import io.lettuce.core.api.async.RedisAsyncCommands;
 
 /**
  * Simple to Introduction
@@ -37,7 +43,7 @@ public class RedisServiceImpl implements RedisService {
     	  //实现doInRedis方法
     	  //此处亦可以创建SessionCallack的内部类
     	  //由用户自己决定
-    	  new RedisCallback() {
+    		new RedisCallback<Object>() {
     	    public Object doInRedis(RedisConnection connection) throws DataAccessException {
     	      //创建连接
     	      StringRedisConnection stringRedisConn = (StringRedisConnection)connection;
@@ -49,12 +55,6 @@ public class RedisServiceImpl implements RedisService {
     	    return null;
     	  }
 
-			@Override
-			public Object doInRedis(org.springframework.data.redis.connection.RedisConnection connection)
-					throws DataAccessException {
-				// TODO Auto-generated method stub
-				return null;
-			}
     	});
     	return results;
     }
@@ -63,6 +63,23 @@ public class RedisServiceImpl implements RedisService {
         ValueOperations<String, String> ops = this.template.opsForValue();
         return ops.get(key);
     }
+    public String getL(String key) {
+    	
+    	RedisClient client = RedisClient.create(""); 
+    	StatefulRedisConnection<String, String> connection = client.connect(); 
+//    	RedisCommands<String, String> commands = connection.sync();
+//    	String value = commands.get("key"); 	
+    	RedisAsyncCommands<String, String> commands = connection.async();
+    	RedisFuture<String> future = commands.get("key"); 
+    	String value = null;
+		try {
+			value = future.get();
+		} catch (InterruptedException | ExecutionException e) {
+			e.printStackTrace();
+		}
+    	return value;
+    }
+    
 
     @Override
     public void set(String key, String value) {
