@@ -12,7 +12,7 @@ import io.lettuce.core.ReadFrom;
 class WriteToMasterReadFromReplicaConfiguration {
 
 //配置Lettuce连接工厂
-  @Bean
+//  @Bean
   public LettuceConnectionFactory redisConnectionFactory() {
     LettuceClientConfiguration clientConfig = LettuceClientConfiguration.builder()
       .readFrom(ReadFrom.SLAVE_PREFERRED) //配置从读
