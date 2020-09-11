@@ -24,14 +24,14 @@ spring:
       waitmillis: -1
     sentinel: 
       database: 0
-      host: kevin1
+      host: kevin4
       password: 123456
       port: 26379
 eureka:
   client:
     service-url:
    ##### 当前会员服务注册到eureka服务地址
-      defaultZone: http://localhost:8100/eureka
+      defaultZone: http://kevin2:8080/eureka
 server:
   port: 8510
 

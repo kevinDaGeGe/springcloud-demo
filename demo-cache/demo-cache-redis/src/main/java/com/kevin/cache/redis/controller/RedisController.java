@@ -1,11 +1,9 @@
 package com.kevin.cache.redis.controller;
 
-import java.util.Iterator;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +26,7 @@ public class RedisController {
 	@Autowired
 	private RedisService redisService;
 	
-	@GetMapping(value = "/psubscribe")
+	@PostMapping(value = "/psubscribe")
     public String psubscribe(String key) {
         log.info("psubscribe={}",key);
         redisUtil.psubscribe(keyExpiredListener, key);
@@ -54,5 +52,11 @@ public class RedisController {
 		}
 		log.info("setList end...");
         return "success";
+	}
+	@GetMapping(value = "/setPList", produces = "application/json;charset=UTF-8")
+	public String setPipelline(int size) {
+		redisService.setList(size);
+		log.info("setList end...");
+		return "success";
 	}
 }
