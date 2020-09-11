@@ -24,7 +24,9 @@ public class RedisUtil {
 			RedisConnection redisConnection = template.getConnectionFactory().getConnection();
 //			redisConnection.setConfig(parameter, "E$xe");
 			redisConnection.setConfig(parameter, "KEA");
-			redisConnection.pSubscribe(keyExpiredListener, ("__keyspace@0__:"+pattern).getBytes("UTF-8") );
+//			redisConnection.pSubscribe(keyExpiredListener, ("__keyspace@0__:"+pattern).getBytes("UTF-8") );
+			redisConnection.subscribe(keyExpiredListener, ("__keyspace@0__:"+pattern).getBytes("UTF-8") );
+			log.info(redisConnection.toString());
 			log.info("订阅成功,key="+pattern);
 		} catch (Exception e) {
 			log.error("redis订阅异常", e);

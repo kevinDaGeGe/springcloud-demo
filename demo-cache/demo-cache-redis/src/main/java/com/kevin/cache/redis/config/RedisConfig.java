@@ -2,13 +2,10 @@ package com.kevin.cache.redis.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisPassword;
 import org.springframework.data.redis.connection.RedisSentinelConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -19,7 +16,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import io.lettuce.core.ReadFrom;
 
 @Configuration
-@EnableCaching
+//@EnableCaching
 @ComponentScan("com.kevin.cache.redis")
 public class RedisConfig {
 	@Bean

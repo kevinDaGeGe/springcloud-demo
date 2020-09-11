@@ -8,7 +8,7 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 
 import io.lettuce.core.ReadFrom;
 
-@Configuration
+//@Configuration
 class WriteToMasterReadFromReplicaConfiguration {
 
 //配置Lettuce连接工厂

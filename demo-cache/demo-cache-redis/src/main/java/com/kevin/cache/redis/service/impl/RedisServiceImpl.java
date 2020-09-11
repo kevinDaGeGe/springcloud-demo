@@ -43,27 +43,32 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public List<Object> setList(int size){
     	//从一个队列中删除指定数量的元素
-    	List<Object> results = template.executePipelined(
-    	  //RedisCallback内部类
-    	  //实现doInRedis方法
-    	  //此处亦可以创建SessionCallack的内部类
-    	  //由用户自己决定
-    		new RedisCallback<Object>() {
-    	    public Object doInRedis(RedisConnection connection) throws DataAccessException {
-    	      //创建连接
-    	      StringRedisConnection stringRedisConn = (StringRedisConnection)connection;
-    	      for(int i=0; i< size; i++) {
-    	        //循环调用rpop进行batchSize次右删除
-    	    	String value = System.currentTimeMillis()+"";
-    	    	String key = "listen_"+i;
-    	    	log.info("key="+key);
-				stringRedisConn.set(key, value,Expiration.seconds(60),SetOption.SET_IF_ABSENT);
-				stringRedisConn.closePipeline();
-    	      }
-    	    return null;
-    	  }
+    	log.info(template.getConnectionFactory().getConnection().toString());
+		List<Object> results = template.executePipelined(
+				// RedisCallback内部类
+				// 实现doInRedis方法
+				// 此处亦可以创建SessionCallack的内部类
+				// 由用户自己决定
+				new RedisCallback<Object>() {
+					public Object doInRedis(RedisConnection connection) throws DataAccessException {
+						// 创建连接
+						StringRedisConnection stringRedisConn = (StringRedisConnection) connection;
+						for (int i = 0; i < size; i++) {
+							// 循环调用rpop进行batchSize次右删除
+							String value = System.currentTimeMillis() + "";
+							String key = "listen_" + i;
+							log.info("key=" + key);
+							try {
+								stringRedisConn.set(key, value, Expiration.seconds(60), SetOption.SET_IF_ABSENT);
+							} catch (Exception e) {
+						    	log.error(template.getConnectionFactory().getConnection().toString()+e.getMessage(),e);
+							}
+							stringRedisConn.closePipeline();
+						}
+						return null;
+					}
 
-    	});
+				});
     	return results;
     }
     @Override
